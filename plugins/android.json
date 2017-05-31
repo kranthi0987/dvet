@@ -8,27 +8,27 @@
   },
   "installed_plugins": {
     "cordova-plugin-backbutton": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     },
     "phonegap-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     },
     "org.apache.cordova.home": {
-      "PACKAGE_NAME": "com.nsdc.certificateverify"
+      "PACKAGE_NAME": "com.nsdc.dvet"
     }
   }
 }

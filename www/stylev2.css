@@ -1580,7 +1580,7 @@ img#splashLogo {
     overflow-y: auto;
 }
 
-}
+
 #scheduleCandidatesMarksUpdateContainer .switch {
     float: right;
     margin-right: 51px;
@@ -1605,9 +1605,6 @@ img#splashLogo {
     margin-left: 0px;
 }
 
-.overDuecontentview > h3 {
-    text-align: center;
-}
 
 .NoseType {
     color: white;
@@ -1681,31 +1678,6 @@ div#scheduleContainer .contentview {
     width: 100%;
 }
 
-/*
-
-.ion-ios-close-empty:before {
-    color: #3498db;
-    background-image: url(icons/close.png);
-    width: 20px;
-    font-size: 35px;
-}
-
-.ion-android-arrow-back:before {
-    color: #3498db;
-    background-image: url(icons/back.png);
-    width: 20px;
-}
-
-
-.zmdi-menu:before {
-    color: #3498db;
-    background-image: url(icons/menu.png);
-    width: 20px;
-    
-}
-
-*/
-
 #marksUpdateList h3 {
     padding-left: 10px;
     background-color: #12a794;
@@ -1741,78 +1713,47 @@ div#scheduleContainer .contentview {
     padding-bottom: 60px;
 }
 
-.assesorprofile {
-
-}
-
-.col.title {
-    font-size: 13px;
-}
-
-.col.value {
-    font-size: 13px;
-}
-
-#detailsList {
-    border-bottom: #dcdcdc 1px solid;
-    margin-top: -10px;
-    padding-bottom: 15px;
-    margin-bottom: -25px;
-}
-
-.histDetailsCont .card {
-    width: 49.5%;
-    float: left;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-#SectorList {
-    max-height: 65px;
-    overflow: auto
-}
-
-#assessorProfilePage .page__content.page--material__content {
+#statuspage .page__content.page--material__content {
     overflow: auto;
 }
 
-div#addressdetails {
-    margin-bottom: -10px;
+form {
+    padding: 5%;
+
 }
 
-#agencyDetailsContainer #detailsList {
-    margin-top: 15px;
+label {
+    float: left;
 }
 
-#assessorProfilePageEdit .select-wrapper input.select-dropdown {
+.fontsizelarger {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.fontsizelabel {
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.labeldesign {
+    word-wrap: break-word;
     position: relative;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #9e9e9e;
-    outline: none;
-    height: 3rem;
-    line-height: 3rem;
-    width: 100%;
-    font-size: 1rem;
-    margin: 0 0 0px 0;
-    padding: 0;
     display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
 }
 
-#assessorProfilePageEdit .col.s5.title {
-    padding: 12px;
-    vertical-align: middle;
-}
-
-.select-wrapper.col.s7.value.batchNameValue {
-    padding-left: 0px;
-}
-
-#assessorProfilePageEdit input.text-input--material {
-    margin-bottom: 0px;
-}
-
-#assessorProfilePageEdit #detailsList {
-    margin-top: -10px;
-}
+/*label:hover*/
+/*{*/
+/*background: #109177;*/
+/*}*/
