@@ -4,137 +4,228 @@
             <!--<ons-icon icon="ion-navicon, material:md-back" size="32px, material:24px"></ons-icon>-->
             <div class="icon ion-ios-close-empty navbar-button-icon"></div>
         </ons-toolbar-button>
-        <div class="left">
-        </div>
+        <div class="left"></div>
         <div class="center" id="">DVET Application Status</div>
         <div class="right"></div>
     </ons-toolbar>
-
-
-    <form>
-        <div class="row">
-            <input class="col s9" type="number" value="1234567894512"/><label class="col s6 fontsizelabel"><strong>REG
-            NUMBER</strong></label>
-            <input class="col s9" type="text" value="sanjay kranthi kumar singh"/><label
-                class="col s6 fontsizelabel"><strong>NAME OF
-            CANDIDATE</strong></label>
-        </div>
-        <div class="row">
-            <label class="col s12 center-align fontsizelabel labeldesign"><strong>APPLICATION CONFIRMATION
-                STATUS</strong></label><br>
-            <div class="divider"></div>
-            <input id="applicatinfilledup" class="col s6" type="text"
-                   value=""/><label class="col s6" for="applicatinfilledup">APPLICATION FILLED UP AND SUBMITTED</label>
-            <input id="appilcationconfirmed" class="col s6" type="text" value=""/><label class="col s6"
-                                                                                         for="appilcationconfirmed">APPLICATION
-            CONFIRMED</label>
-            <input id="nameofitiwhere" class="col s6" type="text"
-                   value=""/><label class="col s6" for="nameofitiwhere">NAME OF ITI WHERE APPLICATION IS
-            CONFIRMED</label>
-            <input id="applicationfeepaid"
-                   class="col s6"
-                   type="text" value=""/><label class="col s6" for="applicationfeepaid">APPLICATION FEES PAID</label>
-            <input id="applicationconfirmationdate" class="col s6" type="text" value=""/><label class="col s6"
-                                                                                                for="applicationconfirmationdate">APPLICATION
-            CONFIRMATION DATE</label>
-            <div class="divider"></div>
-        </div>
-        <div class="row">
-            <label class="col s12 center-align fontsizelabel labeldesign"><strong>APPLICATION MERIT
-                NUMBER</strong></label><br>
-            <div class="divider"></div>
-            <label class="col s6">STATE LEVEL GENERAL MERIT NUMBER</label><input class="col s6" type="text" value=""/>
-            <label class="col s6">STATE LEVEL CATEGORY MERIT NUMBER (AS APPLICABLE)</label><input class="col s6"
-                                                                                                  type="text" value=""/>
-            <label class="col s6">HOME DISTRICT GENERAL MERIT NUMBER</label><input class="col s6" type="text" value=""/>
-            <label class="col s6">HOME DISTRICT CATEGORY MERIT NUMBER (AS APPLICABLE)</label><input class="col s6"
-                                                                                                    type="text"
-                                                                                                    value=""/>
-        </div>
-        <div class="row">
-            <label class="center-align fontsizelarger labeldesign"><strong><b>ALLOTMENT STATUS</b></strong></label><br>
-        </div>
-        <div class="row">
-            <div>
+    <div id="watermark">
+        <form>
+            <div class="row">
+                <input style="float: right" class="col s7" type="number" id="REGNUMBER" value="1234567894512"/>
+                <label style="float: left" for="REGNUMBER" class="col s5 fontsizelabel"><strong>REG
+                    NUMBER</strong></label>
+                <input style="float: right" class="col s7" id="nameofcandidate" type="text"
+                       value="sanjay kranthi kumar singh"/>
+                <label style="float: left" for="nameofcandidate" class="col s5 fontsizelabel"><strong>NAME OF
+                    CANDIDATE</strong></label>
+            </div>
+            <div class="row">
+                <label class="col s12 center-align fontsizelabel labeldesign">APPLICATION CONFIRMATION STATUS</label>
+            </div>
+            <div class="row">
+                <input style="float:right" id="applicatinfilledup" class="col s6" type="text" value=""/>
+                <label class="col s6" for="applicatinfilledup">APPLICATION FILLED UP AND SUBMITTED</label>
+            </div>
+            <div class="row">
+                <input style="float:right" id="appilcationconfirmed" class="col s6" type="text" value=""/>
+                <label class="col s6" for="appilcationconfirmed">APPLICATION CONFIRMED</label>
+            </div>
+            <div class="row">
+                <input style="float:right" id="nameofitiwhere" class="col s6" type="text" value=""/>
+                <label class="col s6" for="nameofitiwhere">NAME OF ITI WHERE APPLICATION IS CONFIRMED</label>
+            </div>
+            <div class="row">
+                <input style="float:right" id="applicationfeepaid" class="col s6" type="text" value=""/>
+                <label class="col s6" for="applicationfeepaid">APPLICATION FEES PAID</label>
+            </div>
+            <div class="row">
+                <input style="float:right" id="applicationconfirmationdate" class="col s6" type="text" value=""/>
+                <label class="col s6" for="applicationconfirmationdate">APPLICATION CONFIRMATION DATE</label>
+            </div>
+            <div class="row">
+                <label class="col s12 center-align fontsizelabel labeldesign"><strong>APPLICATION MERIT
+                    NUMBER</strong></label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text" value=""/>
+                <label class="col s6">STATE LEVEL GENERAL MERIT NUMBER </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text" value=""/>
+                <label class="col s6">STATE LEVEL CATEGORY MERIT NUMBER (AS APPLICABLE) </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text" value=""/>
+                <label class="col s6">HOME DISTRICT GENERAL MERIT NUMBER </label>
+            </div>
+            <div class="row"><input style="float:right" class="col s6" type="text" value=""/>
+                <label class="col s6">HOME DISTRICT CATEGORY MERIT NUMBER (AS APPLICABLE) </label>
+            </div>
+            <div class="row">
+                <label class="center-align fontsizelarger labeldesign"><strong><b>ALLOTMENT
+                    STATUS</b></strong> </label>
+            </div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>FIRST ROUND ALLOTMENT
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ALLOTED ITI</label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF ALLOTED TRADE</label><input class="col s6" type="text"/>
-                <label class="col s6">ALLOTMENT CATEGORY</label><input class="col s6" type="text"/>
+                    STATUS</strong> </label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED ITI </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED TRADE </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ALLOTMENT CATEGORY </label>
+            </div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>SECOND ROUND ALLOTMENT
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ALLOTED ITI</label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF ALLOTED TRADE</label><input class="col s6" type="text"/>
-                <label class="col s6">ALLOTMENT CATEGORY</label><input class="col s6" type="text"/>
+                    STATUS</strong></label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED ITI </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED TRADE </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ALLOTMENT CATEGORY </label>
+            </div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>THIRD ROUND ALLOTMENT
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ALLOTED ITI</label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF ALLOTED TRADE</label><input class="col s6" type="text"/>
-                <label class="col s6">ALLOTMENT CATEGORY</label><input class="col s6" type="text"/>
+                    STATUS</strong></label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED ITI </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED TRADE </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ALLOTMENT CATEGORY </label>
+            </div>
+            <div class="row"></div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>FORTH ROUND ALLOTMENT
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ALLOTED ITI</label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF ALLOTED TRADE</label><input class="col s6" type="text"/>
-                <label class="col s6">ALLOTMENT CATEGORY</label><input class="col s6" type="text"/>
+                    STATUS</strong></label>
             </div>
-            <div>
-                <label class="col s12 center-align fontsizelabel labeldesign"><strong>FIFTH – CONCELLING ROUND ALLOTMENT
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ALLOTED ITI</label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF ALLOTED TRADE</label><input class="col s6" type="text"/>
-                <label class="col s6">ALLOTMENT CATEGORY</label><input class="col s6" type="text"/>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED ITI </label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED TRADE </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ALLOTMENT CATEGORY </label>
+            </div>
+            <div class="row">
+                <label class="col s12 center-align fontsizelabel labeldesign"><strong>FIFTH – CONCELLING ROUND
+                    ALLOTMENT
+                    STATUS</strong></label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED ITI </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ALLOTED TRADE </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ALLOTMENT CATEGORY </label>
+            </div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>INSTITUTE LEVEL APPLICATION
-                    STATUS</strong> </label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ITI APPLIED FOR CONFIRMED </label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF TRADE APPLIED FOR CONFIRMED </label><input class="col s6" type="text"/>
-                <label class="col s6">APPLICANT CATEGORY </label><input class="col s6" type="text"/>
+                    STATUS</strong> </label>
             </div>
-            <div>
-                <label class="col s12 center-align fontsizelabel labeldesign"><strong>ADMISSION STATUS</strong> </label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ITI ADMITTED IN </label><input class="col s6" type="text"/>
-                <label class="col s6">NAME OF TRADE ADMITTED IN </label><input class="col s6" type="text"/>
-                <label class="col s6">ADMITTED CATEGORY</label><input class="col s6" type="text"/>
-                <label class="col s6">ADMITTED IN ROUND </label><input class="col s6" type="text"/>
-                <label class="col s6">DATE OF ADMISSION </label><input class="col s6" type="text"/>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ITI APPLIED FOR CONFIRMED </label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF TRADE APPLIED FOR CONFIRMED </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">APPLICANT CATEGORY </label>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <label class="col s12 center-align fontsizelabel labeldesign"><strong>ADMISSION STATUS</strong> </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ITI ADMITTED IN </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF TRADE ADMITTED IN </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ADMITTED CATEGORY </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">ADMITTED IN ROUND </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">DATE OF ADMISSION </label>
+            </div>
+            <div class="row"></div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>ADMISSION REJECTION
-                    STATUS</strong></label><br>
-                <div class="divider"></div>
-                <label class="col s6">NAME OF ITI IN WHICH ALLOTED BUT ADMISSION REJECTED</label><input class="col s6"
-                                                                                                        type="text"/>
-                <label class="col s6">NAME OF TRADE IN WHICH ALLOTED BUT ADMISSION REJECTED</label><input class="col s6"
-                                                                                                          type="text"/>
-                <label class="col s6">DATE OF ADMISSION REJECTION</label><input class="col s6" type="text"/>
-                <label class="col s6">REASON OF ADMISSIN REJECTION </label><input class="col s6" type="text"/>
+                    STATUS</strong></label>
             </div>
-            <div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF ITI IN WHICH ALLOTED BUT ADMISSION REJECTED </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF TRADE IN WHICH ALLOTED BUT ADMISSION REJECTED </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">DATE OF ADMISSION REJECTION </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">REASON OF ADMISSIN REJECTION </label>
+            </div>
+            <div class="row"></div>
+            <div class="row">
                 <label class="col s12 center-align fontsizelabel labeldesign"><strong>ADMISSION CANCELLATION
-                    STATUS</strong> </label><br>
-                <div class="divider"></div>
-                <label class="col s6" for="nameofiti">NAME OF ITI ADMITTED IN AND CANCELLED ADMISSION </label><input
-                    id="nameofiti" class="col s6"
-                    type="text"/>
-                <label class="col s6">NAME OF TRADE ADMITTED IN AND CANCELLED ADMISSION </label><input class="col s6"
-                                                                                                       type="text"/>
-                <label class="col s6">DATE OF ADMISSION CANCELLATION </label><input class="col s6" type="text"/>
+                    STATUS</strong> </label>
             </div>
-        </div>
-    </form>
-
+            <div class="row">
+                <input style="float:right" id="nameofiti" class="col s6" type="text"/>
+                <label class="col s6" for="nameofiti">NAME OF ITI ADMITTED IN AND CANCELLED ADMISSION </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">NAME OF TRADE ADMITTED IN AND CANCELLED ADMISSION </label>
+            </div>
+            <div class="row">
+                <input style="float:right" class="col s6" type="text"/>
+                <label class="col s6">DATE OF ADMISSION CANCELLATION </label>
+            </div>
+            <div class="row"></div>
+        </form>
+    </div>
 </ons-page>

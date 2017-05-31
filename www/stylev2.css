@@ -1722,9 +1722,7 @@ form {
 
 }
 
-label {
-    float: left;
-}
+
 
 .fontsizelarger {
     font-size: larger;
@@ -1753,7 +1751,15 @@ label {
     margin-bottom: 10px;
 }
 
-/*label:hover*/
-/*{*/
-/*background: #109177;*/
+/*div#watermark {*/
+/*content: "";*/
+/*position: fixed;*/
+/*background-image: url(imgs/dvet/watermark.jpg);*/
+/*padding-top: 138%;*/
+/*opacity: 0.1;*/
+/*height: 400px;*/
+/*width: 400px;*/
+/*background-attachment: fixed;*/
+/*background-position: center;*/
+/*filter: alpha(opacity=50); !* For IE8 and earlier *!*/
 /*}*/
