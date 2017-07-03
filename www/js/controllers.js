@@ -63,14 +63,83 @@ myApp.controllers = {
         $("#check").click(function () {
             document.querySelector('#myNavigator').pushPage('html/statuspage.html');
         });
+        $('#username').keyup(function () {
+            var str = document.getElementById("username").value;
+            str = str.toUpperCase();
+            this.value = str;
+// alert(str)
+        });
     },
     //////////////////////////
     // status Controller //
     //////////////////////////
     statuspage: function (page) {
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+        });
+
+        var div = document.getElementById('datapart');
+        div.style.display = 'none';
         $(".ion-ios-close-empty").click(function () {
             document.querySelector('#myNavigator').popPage();
         });
+        $('#REGNUMBER').keyup(function () {
+            var str = document.getElementById("REGNUMBER").value;
+            str = str.toUpperCase();
+            this.value = str;
+        });
+        $('#reset').click(function () {
+            $("#myform").trigger('reset');
+            div.style.display = 'none';
+        });
+        $('#submitforstatus').click(function () {
+            if (div.style.display == 'none') {
+                div.style.display = '';
+            }
+            else {
+                div.style.display = 'none';
+            }
+            tryToLogin();
+        });
+
+
+        function tryToLogin() {
+            var username = $("#regnumber").val();
+            var password = $("#password").val();
+            if (validateLoginCLick(username, password)) {
+                checkstatus(username, password);
+            }
+            return true;
+        }
+
+
+        function checkstatus(username, password) {
+            $.ajax({
+                url: urllogin(username, password)
+                , type: 'GET'
+                , traditional: true
+                , timeout: 1000
+                , headers: {
+                    "Authorization-Token": getTokenKey()
+                    , "My-Second-Header": "second value"
+                }
+                , statusCode: {
+                    200: function (result) {
+                        console.log(result);
+                        //                            document.querySelector('#myNavigator').pushPage('html/splitter.html');
+
+                    }
+                    , 400: function (response) {
+                        console.log(e);
+                        alert("username Or password wrong");
+                    }
+                    , 0: function (response) {
+                        alert('Some thing went wrong');
+                    }
+                }
+            });
+        }
+
     }
 
 };
