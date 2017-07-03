@@ -8,6 +8,7 @@ function showSpinner() {
     $("#loadingSpinner").show()
 }
 
+
 function hideSpinner() {
     $("#loadingSpinner").hide()
 }

@@ -1742,13 +1742,19 @@ form {
     color: #FFF;
     margin: 0 auto;
     background: #1abc9c;
-    font-size: 18px;
+    font-size: 12px;
     text-align: center;
     font-style: normal;
     width: 100%;
     border: 1px solid #16a085;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.margin {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /*div#watermark {*/
