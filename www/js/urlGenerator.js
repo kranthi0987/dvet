@@ -1,3 +1,3 @@
 function urllogin(username, password) {
-    return SERVER_URL_HEAD + "/login/?assessorId=" + username + "&password=" + password + "&deviceuuid=" + device.uuid;
+    return SERVER_URL_HEAD + "/api/AppApplication/AdmissionStatus?RegistrationNo=" + username + "&Password=" + password;
 }

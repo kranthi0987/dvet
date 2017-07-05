@@ -1,0 +1,67 @@
+{
+  "CandidateName": "AVINASH C J",
+  "HomeTalukaName": "Akola",
+  "CandidateCategory": "",
+  "CandidateRegistrationNumber": "201707A425656",
+  "ApplicationConfirmationStatus": {
+    "ApplicationFilledupandSubmitted": "Yes",
+    "ApplicationConfirmed": "No",
+    "NameofITIConfirmed": "",
+    "ApplicationFeePaid": "No",
+    "ApplicationConfirmatioDate": "Jul  5 2017  5:53PM"
+  },
+  "ApplicationMeritNumber": {
+    "StateMeritNumber": "0",
+    "StateCategoryMeritNumber": "0",
+    "HomeTalukaMeritNumber": "0",
+    "HomeTalukaCategoryMeritNumber": "0"
+  },
+  "InstituteLevelAllotmentStatus": {
+    "NameofITIAppliedForConfirmed": "-",
+    "NameofTradeAppliedForConfirmed": "-",
+    "ApplicantCategory": "-"
+  },
+  "AdmissionStatus": {
+    "NameofITIAdmiitedIn": "-",
+    "NameofTradeAdmiitedIn": "-",
+    "AdmittedCategory": "-",
+    "AdmittedInRound": "",
+    "DateofAdmission": "-"
+  },
+  "AdmissionRejectionStatus": {
+    "NameofITIInwhichAllottedButAdmissionRejected": "-",
+    "NameofTradeInwhichAllottedButAdmissionRejected": "-",
+    "DateofAdmissionRejection": "-",
+    "ReasonofAdmissionRejection": "-"
+  },
+  "AdmissionCancellationStatus": {
+    "NameofITIAdmittedInAndCancelledAdmission": "-",
+    "NameofTradeAdmittedInAndCancelledAdmission": "-",
+    "DateofAdmissionCancellation": "-"
+  },
+  "FirstAllotmentDetails": {
+    "NameofAllotedITI": "-",
+    "NameofAllotedTrade": "-",
+    "AllotmentCategory": "-"
+  },
+  "SecondAllotmentDetails": {
+    "NameofAllotedITI": "-",
+    "NameofAllotedTrade": "-",
+    "AllotmentCategory": "-"
+  },
+  "ThirdAllotmentDetails": {
+    "NameofAllotedITI": "-",
+    "NameofAllotedTrade": "-",
+    "AllotmentCategory": "-"
+  },
+  "FourthAllotmentDetails": {
+    "NameofAllotedITI": "-",
+    "NameofAllotedTrade": "-",
+    "AllotmentCategory": "-"
+  },
+  "FifthAllotmentDetails": {
+    "NameofAllotedITI": "-",
+    "NameofAllotedTrade": "-",
+    "AllotmentCategory": "-"
+  }
+}

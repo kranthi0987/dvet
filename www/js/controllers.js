@@ -99,6 +99,7 @@ myApp.controllers = {
             else {
                 div.style.display = 'none';
             }
+
             tryToLogin();
         });
 
@@ -119,14 +120,13 @@ myApp.controllers = {
                 , type: 'GET'
                 , traditional: true
                 , timeout: 1000
-                , headers: {
-                    "Authorization-Token": getTokenKey()
-                    , "My-Second-Header": "second value"
-                }
+                , headers: {}
                 , statusCode: {
                     200: function (result) {
+                        //  console.log(url);
                         console.log(result);
-                        //                            document.querySelector('#myNavigator').pushPage('html/splitter.html');
+
+                        //document.querySelector('#myNavigator').pushPage('html/splitter.html');
 
                     }
                     , 400: function (response) {
