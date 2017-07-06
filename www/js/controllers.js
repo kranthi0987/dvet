@@ -75,7 +75,7 @@ myApp.controllers = {
                     //window.location = "#exitDialog";
                     exitAppPopup();
                 } else {
-                    history.back();
+                    document.querySelector('#myNavigator').pushPage('html/checkpage.html');
                 }
             });
         }
