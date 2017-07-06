@@ -288,7 +288,7 @@ myApp.controllers = {
                     , 400: function (response) {
                         hideSpinner();
                         console.log(e);
-                        navigator.notification.alert("username Or password wrong");
+                        navigator.notification.alert("REGISTRATION AND PASSWORD WRONG");
                     }
                     , 0: function (response) {
                         hideSpinner();
