@@ -25,11 +25,11 @@
                 </p>
             </div>
             <div id="datapart">
-                <div class="row">
-                    <div style="float:right" id="applicationstatus" class="col s6 w3-container w3-light-green">
-                        Confirmed
-                    </div>
-                    <label class="col s6" for="applicationstatus">Application Status</label>
+                <div class="row" id="admissionstatuscolor">
+                    <!--<div style="float:right" id="applicationstatus" class="col s6 w3-container w3-light-green">-->
+                    <!--Confirmed-->
+                    <!--</div>-->
+                    <!--<label class="col s6" for="applicationstatus">Application Status</label>-->
 
                 </div>
                 <ul class="collapsible" data-collapsible="accordion">
@@ -69,11 +69,11 @@
                         </div>
                     </li>
                 </ul>
-                <div class="row">
-                    <div style="float:right" id="applicationmeritstatus" class="col s6 w3-container w3-light-green">
-                        Confirmed
-                    </div>
-                    <label class="col s6" for="applicationmeritstatus">Merit Status</label>
+                <div class="row" id="meritstatus">
+                    <!--<div style="float:right" id="applicationmeritstatus" class="col s6 w3-container w3-light-green">-->
+                    <!--Confirmed-->
+                    <!--</div>-->
+                    <!--<label class="col s6" for="applicationmeritstatus">Merit Status</label>-->
 
                 </div>
                 <ul class="collapsible" data-collapsible="accordion">
@@ -86,28 +86,32 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text" value=""/>
+                                <input style="float:right" class="col s6" type="text" id="statelevelgeneralmeritnumber"
+                                       value=""/>
                                 <label class="col s6">STATE LEVEL GENERAL MERIT NUMBER </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text" value=""/>
+                                <input style="float:right" class="col s6" type="text"
+                                       id="statelevelgeneralmeritnumberasapplicable" value=""/>
                                 <label class="col s6">STATE LEVEL CATEGORY MERIT NUMBER (AS APPLICABLE) </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text" value=""/>
+                                <input style="float:right" class="col s6" type="text" id="homedistrictgenralmeritnumber"
+                                       value=""/>
                                 <label class="col s6">HOME DISTRICT GENERAL MERIT NUMBER </label>
                             </div>
-                            <div class="row"><input style="float:right" class="col s6" type="text" value=""/>
+                            <div class="row"><input style="float:right" class="col s6" type="text"
+                                                    id="homedistrictgenralmeritnumberasapplicable" value=""/>
                                 <label class="col s6">HOME DISTRICT CATEGORY MERIT NUMBER (AS APPLICABLE) </label>
                             </div>
                         </div>
                     </li>
                 </ul>
 
-                <div class="row">
-                    <div style="float:right" id="allotmentstatus" class="col s6 w3-container w3-light-green">Confirmed
-                    </div>
-                    <label class="col s6" for="allotmentstatus">Allotment Status</label>
+                <div class="row" id="allotmentstatus">
+                    <!--<div style="float:right" id="allotmentstatus" class="col s6 w3-container w3-light-green">Confirmed-->
+                    <!--</div>-->
+                    <!--<label class="col s6" for="allotmentstatus">Allotment Status</label>-->
 
                 </div>
 
@@ -128,15 +132,15 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="1nameofallotediti" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED ITI </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="1nameofallotedtrade" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED TRADE </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="1allotmentcategory" type="text"/>
                                 <label class="col s6">ALLOTMENT CATEGORY </label>
                             </div>
                         </div>
@@ -153,15 +157,15 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="2nameofallotediti" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED ITI </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="2nameofallotedtrade" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED TRADE </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="2allotmentcategory" type="text"/>
                                 <label class="col s6">ALLOTMENT CATEGORY </label>
                             </div>
                         </div>
@@ -178,15 +182,15 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="3nameofallotediti" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED ITI </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="3nameofallotedtrade" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED TRADE </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="3allotmentcategory" type="text"/>
                                 <label class="col s6">ALLOTMENT CATEGORY </label>
                             </div>
                         </div>
@@ -203,15 +207,15 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="4nameofallotediti" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED ITI </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="4nameofallotedtrade" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED TRADE </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="4allotmentcategory" type="text"/>
                                 <label class="col s6">ALLOTMENT CATEGORY </label>
                             </div>
                         </div>
@@ -228,15 +232,15 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="5nameofallotediti" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED ITI </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="5nameofallotedtrade" type="text"/>
                                 <label class="col s6">NAME OF ALLOTED TRADE </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="5allotmentcategory" type="text"/>
                                 <label class="col s6">ALLOTMENT CATEGORY </label>
                             </div>
                         </div>
@@ -262,10 +266,10 @@
                 <!--</div>-->
                 <!--<div class="row"></div>-->
 
-                <div class="row">
-                    <div style="float:right" id="admissionstatus" class="col s6 w3-container w3-light-green">Confirmed
-                    </div>
-                    <label class="col s6" for="admissionstatus">Admission Status</label>
+                <div class="row" id="admissionstatus">
+                    <!--<div style="float:right" id="admissionstatus" class="col s6 w3-container w3-light-green">Confirmed-->
+                    <!--</div>-->
+                    <!--<label class="col s6" for="admissionstatus">Admission Status</label>-->
 
                 </div>
                 <ul class="collapsible" data-collapsible="accordion">
@@ -279,23 +283,23 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="nameofitiadmittedin" type="text"/>
                                 <label class="col s6">NAME OF ITI ADMITTED IN </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="nameoftradeadmittedin" type="text"/>
                                 <label class="col s6">NAME OF TRADE ADMITTED IN </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="admittedcategory" type="text"/>
                                 <label class="col s6">ADMITTED CATEGORY </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="admittedinround" type="text"/>
                                 <label class="col s6">ADMITTED IN ROUND </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="dateofadmission" type="text"/>
                                 <label class="col s6">DATE OF ADMISSION </label>
                             </div>
                         </div>
@@ -312,19 +316,21 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6"
+                                       id="nameofitiinwhichallotedbutadmisionrejected" type="text"/>
                                 <label class="col s6">NAME OF ITI IN WHICH ALLOTED BUT ADMISSION REJECTED </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="nameofthetradeinwhichrejected"
+                                       type="text"/>
                                 <label class="col s6">NAME OF TRADE IN WHICH ALLOTED BUT ADMISSION REJECTED </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="dateofadmissionrejected" type="text"/>
                                 <label class="col s6">DATE OF ADMISSION REJECTION </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="reasonofrejected" type="text"/>
                                 <label class="col s6">REASON OF ADMISSIN REJECTION </label>
                             </div>
                         </div>
@@ -341,16 +347,16 @@
                         </div>
                         <div class="collapsible-body">
                             <div class="row">
-                                <input style="float:right" id="nameofiti" class="col s6" type="text"/>
-                                <label class="col s6" for="nameofiti">NAME OF ITI ADMITTED IN AND CANCELLED
+                                <input style="float:right" id="nameofiticancelled" class="col s6" type="text"/>
+                                <label class="col s6" for="nameofiticancelled">NAME OF ITI ADMITTED IN AND CANCELLED
                                     ADMISSION </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="nameoftradecancelled" type="text"/>
                                 <label class="col s6">NAME OF TRADE ADMITTED IN AND CANCELLED ADMISSION </label>
                             </div>
                             <div class="row">
-                                <input style="float:right" class="col s6" type="text"/>
+                                <input style="float:right" class="col s6" id="dateofadmissioncancelled" type="text"/>
                                 <label class="col s6">DATE OF ADMISSION CANCELLATION </label>
                             </div>
                         </div>

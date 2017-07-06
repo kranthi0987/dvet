@@ -1,6 +1,6 @@
 function validateLoginCLick(username, password) {
     if (username == "" || password == "") {
-        alert("Please fill the required details");
+        navigator.notification.alert("Please fill the required details");
         return false;
     }
     return true;
@@ -8,7 +8,7 @@ function validateLoginCLick(username, password) {
 
 function validateForgotPassword(emailID) {
     if (!emailID || emailID == "") {
-        alert("Please eneter valid email ID.")
+        navigator.notification.alert("Please eneter valid email ID.");
     }
 }
 $('#decimalPt, .decimalPt').keypress(function (evt) {
