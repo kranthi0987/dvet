@@ -1,21 +1,53 @@
 {
-  "CandidateName": "AVINASH C J",
-  "HomeTalukaName": "Akola",
-  "CandidateCategory": "",
+  "AllotmentList": [
+    {
+      "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (WOMAN), AURANGABAD, TAL: AURANGABAD, DIST: AURANGABAD",
+      "NameofAllotedTrade": "Electrician",
+      "AllotmentCategory": "ADIVASI",
+      "RoundName": "First Round"
+    },
+    {
+      "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+      "NameofAllotedTrade": "Instrument Mechanic",
+      "AllotmentCategory": "DEFENSE",
+      "RoundName": "Second Round"
+    },
+    {
+      "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+      "NameofAllotedTrade": "Surveyor",
+      "AllotmentCategory": "GENERAL",
+      "RoundName": "Third Round"
+    },
+    {
+      "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+      "NameofAllotedTrade": "Surveyor",
+      "AllotmentCategory": "GENERAL",
+      "RoundName": "Fourth Round"
+    },
+    {
+      "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+      "NameofAllotedTrade": "Surveyor",
+      "AllotmentCategory": "GENERAL",
+      "RoundName": "Fifth Round"
+    }
+  ],
+  "CandidateName": "FDGDFG DFGDFG",
+  "HomeTalukaName": "Jamkhed",
+  "CandidateCategory": "Haran Shikari",
   "IsDocumentVerified": true,
-  "CandidateRegistrationNumber": "201707A425656",
+  "CandidateRegistrationNumber": "201707A190032",
   "ApplicationConfirmationStatus": {
     "ApplicationFilledupandSubmitted": "Yes",
     "ApplicationConfirmed": "No",
     "NameofITIConfirmed": "",
     "ApplicationFeePaid": "No",
-    "ApplicationConfirmatioDate": "Jul  5 2017  5:53PM"
+    "ApplicationConfirmatioDate": "03-Jul-2017"
   },
   "ApplicationMeritNumber": {
-    "StateMeritNumber": "0",
-    "StateCategoryMeritNumber": "0",
-    "HomeTalukaMeritNumber": "0",
-    "HomeTalukaCategoryMeritNumber": "0"
+    "StateMeritNumber": "12",
+    "StateCategoryMeritNumber": "21",
+    "HomeTalukaMeritNumber": "32",
+    "HomeTalukaCategoryMeritNumber": "34"
   },
   "InstituteLevelAllotmentStatus": {
     "NameofITIAppliedForConfirmed": "-",
@@ -23,11 +55,11 @@
     "ApplicantCategory": "-"
   },
   "AdmissionStatus": {
-    "NameofITIAdmiitedIn": "-",
-    "NameofTradeAdmiitedIn": "-",
+    "NameofITIAdmiitedIn": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (WOMAN), AURANGABAD, TAL: AURANGABAD, DIST: AURANGABAD",
+    "NameofTradeAdmiitedIn": "Electrician",
     "AdmittedCategory": "-",
-    "AdmittedInRound": "",
-    "DateofAdmission": "-"
+    "AdmittedInRound": "First Round",
+    "DateofAdmission": "Jul  7 2017  6:44PM"
   },
   "AdmissionRejectionStatus": {
     "NameofITIInwhichAllottedButAdmissionRejected": "-",
@@ -41,28 +73,28 @@
     "DateofAdmissionCancellation": "-"
   },
   "FirstAllotmentDetails": {
-    "NameofAllotedITI": "-",
-    "NameofAllotedTrade": "-",
-    "AllotmentCategory": "-"
+    "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (WOMAN), AURANGABAD, TAL: AURANGABAD, DIST: AURANGABAD",
+    "NameofAllotedTrade": "Electrician",
+    "AllotmentCategory": "ADIVASI"
   },
   "SecondAllotmentDetails": {
-    "NameofAllotedITI": "-",
-    "NameofAllotedTrade": "-",
-    "AllotmentCategory": "-"
+    "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+    "NameofAllotedTrade": "Instrument Mechanic",
+    "AllotmentCategory": "DEFENSE"
   },
   "ThirdAllotmentDetails": {
-    "NameofAllotedITI": "-",
-    "NameofAllotedTrade": "-",
-    "AllotmentCategory": "-"
+    "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+    "NameofAllotedTrade": "Surveyor",
+    "AllotmentCategory": "GENERAL"
   },
   "FourthAllotmentDetails": {
-    "NameofAllotedITI": "-",
-    "NameofAllotedTrade": "-",
-    "AllotmentCategory": "-"
+    "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+    "NameofAllotedTrade": "Surveyor",
+    "AllotmentCategory": "GENERAL"
   },
   "FifthAllotmentDetails": {
-    "NameofAllotedITI": "-",
-    "NameofAllotedTrade": "-",
-    "AllotmentCategory": "-"
+    "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+    "NameofAllotedTrade": "Surveyor",
+    "AllotmentCategory": "GENERAL"
   }
 }

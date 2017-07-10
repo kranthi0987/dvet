@@ -101,6 +101,7 @@ myApp.controllers = {
 
             }
         }
+
         $("#check").click(function () {
             document.querySelector('#myNavigator').pushPage('html/statuspage.html');
         });
@@ -159,7 +160,7 @@ myApp.controllers = {
                 url: urllogin(username, password)
                 , type: 'GET'
                 , traditional: true
-                , timeout: 1000
+                , timeout: 10000
                 , headers: {}
                 , statusCode: {
                     200: function (result) {
@@ -183,7 +184,7 @@ myApp.controllers = {
                                 console.log(datacontent);
                             } else {
                                 var color = "w3-red";
-                                datacontent += '<div style="float:right" id="applicationstatus" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                                datacontent += '<div style="float:right" id="applicationstatus" class="col s6 w3-container ' + color + '">Pending</div>' +
                                     ' <label class="col s6" for="applicationstatus">Application Status</label>';
                                 $("#admissionstatuscolor").html(datacontent);
                                 console.log("green");
@@ -197,14 +198,14 @@ myApp.controllers = {
                             $("#applicationconfirmationdate").val(result.ApplicationConfirmationStatus.ApplicationConfirmatioDate);
                             if (result.ApplicationMeritNumber.StateMeritNumber !== "null") {
                                 var color = "w3-green";
-                                datacontent1 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                                datacontent1 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Declared</div>' +
                                     ' <label class="col s6" for="">Merit Status</label>';
                                 $("#meritstatus").html(datacontent1);
                                 console.log("red");
                                 console.log(datacontent1);
                             } else {
                                 var color = "w3-red";
-                                datacontent1 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                                datacontent1 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Yet to Declare</div>' +
                                     ' <label class="col s6" for="">Merit Status</label>';
                                 $("#meritstatus").html(datacontent1);
                                 console.log("green");
@@ -215,40 +216,79 @@ myApp.controllers = {
                             $("#homedistrictgenralmeritnumber").val(result.ApplicationMeritNumber.HomeTalukaMeritNumber);
                             $("#homedistrictgenralmeritnumberasapplicable").val(result.ApplicationMeritNumber.HomeTalukaCategoryMeritNumber);
                             //allotment status
-                            if (result.FirstAllotmentDetails.NameofAllotedITI !== "null") {
-                                var color = "w3-green";
-                                datacontent2 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                            var divallot = document.getElementById('allotlabel');
+                            // divdivallot.style.display = 'none';
+                            if (result.AllotmentList.length >= 0) {
+                                var color = "w3-red";
+                                datacontent2 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Not Allotted </div>' +
                                     ' <label class="col s6" for="">Allotment Status</label>';
                                 $("#allotmentstatus").html(datacontent2);
                                 console.log("red");
                                 console.log(datacontent2);
+                                divallot.style.display = 'none';
                             } else {
-                                var color = "w3-red";
-                                datacontent2 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                                var color = "w3-green";
+                                datacontent2 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Allotted</div>' +
                                     ' <label class="col s6" for="">Allotment Status</label>';
                                 $("#allotmentstatus").html(datacontent2);
                                 console.log("green");
+                                divallot.style.display = '';
                             }
-                            $("#1nameofallotediti").val(result.FirstAllotmentDetails.NameofAllotedITI);
-                            $("#1nameofallotedtrade").val(result.FirstAllotmentDetails.NameofAllotedTrade);
-                            $("#1allotmentcategory").val(result.FirstAllotmentDetails.AllotmentCategory);
-
-                            $("#2nameofallotediti").val(result.SecondAllotmentDetails.NameofAllotedITI);
-                            $("#2nameofallotedtrade").val(result.SecondAllotmentDetails.NameofAllotedTrade);
-                            $("#2allotmentcategory").val(result.SecondAllotmentDetails.AllotmentCategory);
-
-                            $("#3nameofallotediti").val(result.ThirdAllotmentDetails.NameofAllotedITI);
-                            $("#3nameofallotedtrade").val(result.ThirdAllotmentDetails.NameofAllotedTrade);
-                            $("#3allotmentcategory").val(result.ThirdAllotmentDetails.AllotmentCategory);
-
-                            $("#4nameofallotediti").val(result.FourthAllotmentDetails.NameofAllotedITI);
-                            $("#4nameofallotedtrade").val(result.FourthAllotmentDetails.NameofAllotedTrade);
-                            $("#4allotmentcategory").val(result.FourthAllotmentDetails.AllotmentCategory);
-
-                            $("#5nameofallotediti").val(result.FifthAllotmentDetails.NameofAllotedITI);
-                            $("#5nameofallotedtrade").val(result.FifthAllotmentDetails.NameofAllotedTrade);
-                            $("#5allotmentcategory").val(result.FifthAllotmentDetails.AllotmentCategory);
-                            //admission status
+                            //dynamic allotment list
+                            var arrallo = result.AllotmentList;
+                            var datacontentallot = '';
+                            for (var i in arrallo) {
+                                var id = arrallo[i].NameofAllotedITI;
+                                var name = arrallo[i].NameofAllotedTrade;
+                                var allotmentcat = arrallo[i].AllotmentCategory;
+                                var roundname = arrallo[i].RoundName;
+                                console.log(id + name + allotmentcat + roundname);
+                                datacontentallot += '<ul class="collapsible" data-collapsible="accordion">' +
+                                    '                   <li>' +
+                                    '                      <div class="collapsible-header">' +
+                                    '                         <div class="row">' +
+                                    '                            <label class="col s12 center-align fontsizelabel labeldesign"><strong>' + roundname + ' ALLOTMENT STATUS</strong> </label>' +
+                                    '                     </div>' +
+                                    '                </div>' +
+                                    '               <div class="collapsible-body">' +
+                                    '                  <div class="row">' +
+                                    '                     <input style="float:right" class="col s6" id="" type="text" value="' + id + '" readonly/>' +
+                                    '                    <label class="col s6">NAME OF ALLOTED ITI </label>' +
+                                    '               </div>' +
+                                    '              <div class="row">' +
+                                    '                 <input style="float:right" class="col s6" id="" type="text" value="' + name + '" readonly/>' +
+                                    '          <label class="col s6">NAME OF ALLOTED TRADE </label>' +
+                                    '     </div>' +
+                                    '    <div class="row">' +
+                                    '       <input style="float:right" class="col s6" id="" type="text" value="' + allotmentcat + '" readonly/>' +
+                                    '      <label class="col s6">ALLOTMENT CATEGORY </label>' +
+                                    ' </div>' +
+                                    ' </div>' +
+                                    '</li>' +
+                                    '</ul>';
+                                console.log(datacontent);
+                                $("#allotmentdynamiclist").html(datacontentallot);
+                            }
+                            // $("#1nameofallotediti").val(result.FirstAllotmentDetails.NameofAllotedITI);
+                            // $("#1nameofallotedtrade").val(result.FirstAllotmentDetails.NameofAllotedTrade);
+                            // $("#1allotmentcategory").val(result.FirstAllotmentDetails.AllotmentCategory);
+                            //
+                            // $("#2nameofallotediti").val(result.SecondAllotmentDetails.NameofAllotedITI);
+                            // $("#2nameofallotedtrade").val(result.SecondAllotmentDetails.NameofAllotedTrade);
+                            // $("#2allotmentcategory").val(result.SecondAllotmentDetails.AllotmentCategory);
+                            //
+                            // $("#3nameofallotediti").val(result.ThirdAllotmentDetails.NameofAllotedITI);
+                            // $("#3nameofallotedtrade").val(result.ThirdAllotmentDetails.NameofAllotedTrade);
+                            // $("#3allotmentcategory").val(result.ThirdAllotmentDetails.AllotmentCategory);
+                            //
+                            // $("#4nameofallotediti").val(result.FourthAllotmentDetails.NameofAllotedITI);
+                            // $("#4nameofallotedtrade").val(result.FourthAllotmentDetails.NameofAllotedTrade);
+                            // $("#4allotmentcategory").val(result.FourthAllotmentDetails.AllotmentCategory);
+                            //
+                            // $("#5nameofallotediti").val(result.FifthAllotmentDetails.NameofAllotedITI);
+                            // $("#5nameofallotedtrade").val(result.FifthAllotmentDetails.NameofAllotedTrade);
+                            // $("#5allotmentcategory").val(result.FifthAllotmentDetails.AllotmentCategory);
+                            // //admission status
                             $("#nameofitiadmittedin").val(result.AdmissionStatus.NameofITIAdmiitedIn);
                             $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
                             $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
@@ -292,7 +332,7 @@ myApp.controllers = {
                     }
                     , 0: function (response) {
                         hideSpinner();
-                        navigator.notification.alert('Some thing went wrong');
+                        navigator.notification.alert('Check your internet connectivity');
                     }
                 }
             });
