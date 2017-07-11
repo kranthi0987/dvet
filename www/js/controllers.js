@@ -224,7 +224,7 @@ myApp.controllers = {
                                     ' <label class="col s6" for="">Allotment Status</label>';
                                 $("#allotmentstatus").html(datacontent2);
                                 console.log("red");
-                                console.log(datacontent2);
+                                // console.log(datacontent2);
                                 divallot.style.display = 'none';
                             } else {
                                 var color = "w3-green";
@@ -289,7 +289,7 @@ myApp.controllers = {
                             // $("#5nameofallotedtrade").val(result.FifthAllotmentDetails.NameofAllotedTrade);
                             // $("#5allotmentcategory").val(result.FifthAllotmentDetails.AllotmentCategory);
                             // //admission status
-                            $("#nameofitiadmittedin").val(result.AdmissionStatus.NameofITIAdmiitedIn);
+                            $("#nameofitiadmittedin").html(result.AdmissionStatus.NameofITIAdmiitedIn);
                             $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
                             $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
                             $("#admittedinround").val(result.AdmissionStatus.AdmittedInRound);
@@ -309,13 +309,13 @@ myApp.controllers = {
                                 $("#admissionstatus").html(datacontent3);
                                 console.log("green");
                             }
-                            $("#nameofitiinwhichallotedbutadmisionrejected").val(result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected);
+                            $("#nameofitiinwhichallotedbutadmisionrejected").html(result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected);
                             $("#nameofthetradeinwhichrejected").val(result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected);
                             $("#dateofadmissionrejected").val(result.AdmissionRejectionStatus.DateofAdmissionRejection);
                             $("#reasonofrejected").val(result.AdmissionRejectionStatus.ReasonofAdmissionRejection);
 
                             //cadmission cancell status
-                            $("#nameofiticancelled").val(result.AdmissionCancellationStatus.NameofITIAdmittedInAndCancelledAdmission);
+                            $("#nameofiticancelled").html(result.AdmissionCancellationStatus.NameofITIAdmittedInAndCancelledAdmission);
                             $("#nameoftradecancelled").val(result.AdmissionCancellationStatus.NameofTradeAdmittedInAndCancelledAdmission);
                             $("#dateofadmissioncancelled").val(result.AdmissionCancellationStatus.DateofAdmissionCancellation);
 
@@ -327,12 +327,12 @@ myApp.controllers = {
                     }
                     , 400: function (response) {
                         hideSpinner();
-                        console.log(e);
-                        navigator.notification.alert("REGISTRATION AND PASSWORD WRONG");
+                        // console.log(e);
+                        navigator.notification.alert("Registartion and Password Wrong");
                     }
                     , 0: function (response) {
                         hideSpinner();
-                        navigator.notification.alert('Check your internet connectivity');
+                        navigator.notification.alert('Check your Internet Connectivity');
                     }
                 }
             });
