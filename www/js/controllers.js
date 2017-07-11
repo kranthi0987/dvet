@@ -174,6 +174,9 @@ myApp.controllers = {
                         if (result.IsDocumentVerified == true) {
                             console.log(result);
                             console.log(result.ApplicationConfirmationStatus);
+                            $("#CandidateName").html(result.CandidateName);
+                            $("#HomeTalukaName").html(result.HomeTalukaName);
+                            $("#CandidateCategory").html(result.CandidateCategory);
 
                             if (result.ApplicationConfirmationStatus.ApplicationFilledupandSubmitted !== "null") {
                                 var color = "w3-green";
