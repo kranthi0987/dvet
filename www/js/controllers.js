@@ -255,7 +255,7 @@ myApp.controllers = {
                                     '                </div>' +
                                     '               <div class="collapsible-body">' +
                                     '                  <div class="row">' +
-                                    '                     <input style="float:right" class="col s6" id="" type="text" value="' + id + '" readonly/>' +
+                                    '                     <p style="float:right;font-size: 12px;word-break: break-all;" class="col s6 flow-text" id="" type="text" value="' + id + '" readonly></p>' +
                                     '                    <label class="col s6">NAME OF ALLOTED ITI </label>' +
                                     '               </div>' +
                                     '              <div class="row">' +
@@ -292,26 +292,34 @@ myApp.controllers = {
                             // $("#5nameofallotedtrade").val(result.FifthAllotmentDetails.NameofAllotedTrade);
                             // $("#5allotmentcategory").val(result.FifthAllotmentDetails.AllotmentCategory);
                             // //admission status
-                            $("#nameofitiadmittedin").html(result.AdmissionStatus.NameofITIAdmiitedIn);
-                            $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
-                            $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
-                            $("#admittedinround").val(result.AdmissionStatus.AdmittedInRound);
-                            $("#dateofadmission").val(result.AdmissionStatus.DateofAdmission);
                             //admissin reject status
-                            if (result.AdmissionStatus.NameofITIAdmiitedIn !== "null") {
+                            if (result.AdmissionStatus.NameofITIAdmiitedIn !== "null" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "null" && result.AdmissionStatus.NameofITIAdmiitedIn !== "-" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "-") {
                                 var color = "w3-green";
                                 datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
                                     ' <label class="col s6" for="">Admission Status</label>';
                                 $("#admissionstatus").html(datacontent3);
                                 console.log("red");
                                 console.log(datacontent3);
-                            } else {
+                            } else if (result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "null" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "null" && result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "-" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "-") {
                                 var color = "w3-red";
-                                datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
+                                datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Rejected</div>' +
                                     ' <label class="col s6" for="">Admission Status</label>';
                                 $("#admissionstatus").html(datacontent3);
                                 console.log("green");
                             }
+                            else {
+                                var color = "w3-yellow";
+                                datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Cancelled</div>' +
+                                    ' <label class="col s6" for="">Admission Status</label>';
+                                $("#admissionstatus").html(datacontent3);
+                                console.log("yellow");
+                            }
+                            $("#nameofitiadmittedin").html(result.AdmissionStatus.NameofITIAdmiitedIn);
+                            $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
+                            $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
+                            $("#admittedinround").val(result.AdmissionStatus.AdmittedInRound);
+                            $("#dateofadmission").val(result.AdmissionStatus.DateofAdmission);
+
                             $("#nameofitiinwhichallotedbutadmisionrejected").html(result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected);
                             $("#nameofthetradeinwhichrejected").val(result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected);
                             $("#dateofadmissionrejected").val(result.AdmissionRejectionStatus.DateofAdmissionRejection);
