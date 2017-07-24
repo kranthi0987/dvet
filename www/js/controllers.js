@@ -178,7 +178,7 @@ myApp.controllers = {
                             $("#HomeTalukaName").html(result.HomeTalukaName);
                             $("#CandidateCategory").html(result.CandidateCategory);
 
-                            if (result.ApplicationConfirmationStatus.ApplicationFilledupandSubmitted !== "null") {
+                            if (result.ApplicationConfirmationStatus.ApplicationFilledupandSubmitted !== null || result.ApplicationConfirmationStatus.ApplicationFilledupandSubmitted !== "NA") {
                                 var color = "w3-green";
                                 datacontent += '<div style="float:right" id="applicationstatus" class="col s6 w3-container ' + color + '">Confirmed</div>' +
                                     ' <label class="col s6" for="applicationstatus">Application Status</label>';
@@ -196,10 +196,10 @@ myApp.controllers = {
                             //application confirmation status
                             $("#applicatinfilledup").val(result.ApplicationConfirmationStatus.ApplicationFilledupandSubmitted);
                             $("#appilcationconfirmed").val(result.ApplicationConfirmationStatus.ApplicationConfirmed);
-                            $("#nameofitiwhere").val(result.ApplicationConfirmationStatus.NameofITIConfirmed);
+                            $("#nameofitiwhere").html(result.ApplicationConfirmationStatus.NameofITIConfirmed);
                             $("#applicationfeepaid").val(result.ApplicationConfirmationStatus.ApplicationFeePaid);
                             $("#applicationconfirmationdate").val(result.ApplicationConfirmationStatus.ApplicationConfirmatioDate);
-                            if (result.ApplicationMeritNumber.StateMeritNumber !== "null") {
+                            if (result.ApplicationMeritNumber.StateMeritNumber !== "null" || result.ApplicationMeritNumber.StateMeritNumber !== "NA" || result.ApplicationMeritNumber.StateMeritNumber !== undefined) {
                                 var color = "w3-green";
                                 datacontent1 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Declared</div>' +
                                     ' <label class="col s6" for="">Merit Status</label>';
@@ -221,7 +221,42 @@ myApp.controllers = {
                             //allotment status
                             var divallot = document.getElementById('allotlabel');
                             // divdivallot.style.display = 'none';
-                            if (result.AllotmentList.length >= 0) {
+                            var arr = {
+                                "AllotmentList": [
+                                    {
+                                        "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (WOMAN), AURANGABAD, TAL: AURANGABAD, DIST: AURANGABAD",
+                                        "NameofAllotedTrade": "Electrician",
+                                        "AllotmentCategory": "ADIVASI",
+                                        "RoundName": "First Round"
+                                    },
+                                    {
+                                        "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+                                        "NameofAllotedTrade": "Instrument Mechanic",
+                                        "AllotmentCategory": "DEFENSE",
+                                        "RoundName": "Second Round"
+                                    },
+                                    {
+                                        "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+                                        "NameofAllotedTrade": "Surveyor",
+                                        "AllotmentCategory": "GENERAL",
+                                        "RoundName": "Third Round"
+                                    },
+                                    {
+                                        "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+                                        "NameofAllotedTrade": "Surveyor",
+                                        "AllotmentCategory": "GENERAL",
+                                        "RoundName": "Fourth Round"
+                                    },
+                                    {
+                                        "NameofAllotedITI": "GOVERNMENT INDUSTRIAL TRAINING INSTITUTE, (ADIVASI), SHAHAPUR, TAL: SHAHAPUR, DIST: THANE",
+                                        "NameofAllotedTrade": "Surveyor",
+                                        "AllotmentCategory": "GENERAL",
+                                        "RoundName": "Fifth Round"
+                                    }
+                                ]
+                            };
+                            //for testing
+                            if (result.AllotmentList.length <= 0) {
                                 var color = "w3-red";
                                 datacontent2 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Not Allotted </div>' +
                                     ' <label class="col s6" for="">Allotment Status</label>';
@@ -238,6 +273,7 @@ myApp.controllers = {
                                 divallot.style.display = '';
                             }
                             //dynamic allotment list
+
                             var arrallo = result.AllotmentList;
                             var datacontentallot = '';
                             for (var i in arrallo) {
@@ -255,7 +291,7 @@ myApp.controllers = {
                                     '                </div>' +
                                     '               <div class="collapsible-body">' +
                                     '                  <div class="row">' +
-                                    '                     <p style="float:right;font-size: 12px;word-break: break-all;" class="col s6 flow-text" id="" type="text" value="' + id + '" readonly></p>' +
+                                    '                     <p style="float:right;font-size: 12px;word-break: break-all;" class="col s6 flow-text" id="" type="text" value="" readonly>' + id + '</p>' +
                                     '                    <label class="col s6">NAME OF ALLOTED ITI </label>' +
                                     '               </div>' +
                                     '              <div class="row">' +
@@ -271,6 +307,9 @@ myApp.controllers = {
                                     '</ul>';
                                 console.log(datacontent);
                                 $("#allotmentdynamiclist").html(datacontentallot);
+                                $(document).ready(function () {
+                                    $('.collapsible').collapsible();
+                                });
                             }
                             // $("#1nameofallotediti").val(result.FirstAllotmentDetails.NameofAllotedITI);
                             // $("#1nameofallotedtrade").val(result.FirstAllotmentDetails.NameofAllotedTrade);
@@ -293,14 +332,14 @@ myApp.controllers = {
                             // $("#5allotmentcategory").val(result.FifthAllotmentDetails.AllotmentCategory);
                             // //admission status
                             //admissin reject status
-                            if (result.AdmissionStatus.NameofITIAdmiitedIn !== "null" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "null" && result.AdmissionStatus.NameofITIAdmiitedIn !== "-" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "-") {
+                            if (result.AdmissionStatus.NameofITIAdmiitedIn !== null || result.AdmissionStatus.NameofTradeAdmiitedIn !== null && result.AdmissionStatus.NameofITIAdmiitedIn !== "-" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "-" && result.AdmissionStatus.NameofITIAdmiitedIn !== "NA" && result.AdmissionStatus.NameofTradeAdmiitedIn !== "NA") {
                                 var color = "w3-green";
                                 datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Confirmed</div>' +
                                     ' <label class="col s6" for="">Admission Status</label>';
                                 $("#admissionstatus").html(datacontent3);
                                 console.log("red");
                                 console.log(datacontent3);
-                            } else if (result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "null" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "null" && result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "-" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "-") {
+                            } else if (result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== null && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== null && result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "-" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "-" && result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected !== "NA" && result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected !== "NA") {
                                 var color = "w3-red";
                                 datacontent3 += '<div style="float:right" id="" class="col s6 w3-container ' + color + '">Rejected</div>' +
                                     ' <label class="col s6" for="">Admission Status</label>';
@@ -314,32 +353,66 @@ myApp.controllers = {
                                 $("#admissionstatus").html(datacontent3);
                                 console.log("yellow");
                             }
-                            $("#nameofitiadmittedin").html(result.AdmissionStatus.NameofITIAdmiitedIn);
-                            $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
-                            $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
-                            $("#admittedinround").val(result.AdmissionStatus.AdmittedInRound);
-                            $("#dateofadmission").val(result.AdmissionStatus.DateofAdmission);
+                            if (result.AdmissionStatus.NameofITIAdmiitedIn == null || result.AdmissionStatus.NameofTradeAdmiitedIn == null) {
+                                $("#nameofitiadmittedin").html("NA");
+                                $("#nameoftradeadmittedin").val("NA");
+                                $("#admittedcategory").val("NA");
+                                $("#admittedinround").val("NA");
+                                $("#dateofadmission").val("NA");
 
-                            $("#nameofitiinwhichallotedbutadmisionrejected").html(result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected);
-                            $("#nameofthetradeinwhichrejected").val(result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected);
-                            $("#dateofadmissionrejected").val(result.AdmissionRejectionStatus.DateofAdmissionRejection);
-                            $("#reasonofrejected").val(result.AdmissionRejectionStatus.ReasonofAdmissionRejection);
+                            }
+                            else {
+                                $("#nameofitiadmittedin").html(result.AdmissionStatus.NameofITIAdmiitedIn);
+                                $("#nameoftradeadmittedin").val(result.AdmissionStatus.NameofTradeAdmiitedIn);
+                                $("#admittedcategory").val(result.AdmissionStatus.AdmittedCategory);
+                                $("#admittedinround").val(result.AdmissionStatus.AdmittedInRound);
+                                $("#dateofadmission").val(result.AdmissionStatus.DateofAdmission);
 
-                            //cadmission cancell status
-                            $("#nameofiticancelled").html(result.AdmissionCancellationStatus.NameofITIAdmittedInAndCancelledAdmission);
-                            $("#nameoftradecancelled").val(result.AdmissionCancellationStatus.NameofTradeAdmittedInAndCancelledAdmission);
-                            $("#dateofadmissioncancelled").val(result.AdmissionCancellationStatus.DateofAdmissionCancellation);
+                            }
+
+                            if (result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected == null || result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected == null) {
+                                $("#nameofitiinwhichallotedbutadmisionrejected").html("NA");
+                                $("#nameofthetradeinwhichrejected").val("NA");
+                                $("#dateofadmissionrejected").val("NA");
+                                $("#reasonofrejected").val("NA");
+
+                            }
+                            else {
+                                $("#nameofitiinwhichallotedbutadmisionrejected").html(result.AdmissionRejectionStatus.NameofITIInwhichAllottedButAdmissionRejected);
+                                $("#nameofthetradeinwhichrejected").val(result.AdmissionRejectionStatus.NameofTradeInwhichAllottedButAdmissionRejected);
+                                $("#dateofadmissionrejected").val(result.AdmissionRejectionStatus.DateofAdmissionRejection);
+                                $("#reasonofrejected").val(result.AdmissionRejectionStatus.ReasonofAdmissionRejection);
+
+                            }
+
+                            if (result.AdmissionCancellationStatus.NameofITIAdmittedInAndCancelledAdmission == null || result.AdmissionCancellationStatus.NameofTradeAdmittedInAndCancelledAdmission == null) {
+                                //admission cancell status
+                                $("#nameofiticancelled").html("NA");
+                                $("#nameoftradecancelled").val("NA");
+                                $("#dateofadmissioncancelled").val("NA");
+
+                            }
+                            else {
+                                //admission cancell status
+                                $("#nameofiticancelled").html(result.AdmissionCancellationStatus.NameofITIAdmittedInAndCancelledAdmission);
+                                $("#nameoftradecancelled").val(result.AdmissionCancellationStatus.NameofTradeAdmittedInAndCancelledAdmission);
+                                $("#dateofadmissioncancelled").val(result.AdmissionCancellationStatus.DateofAdmissionCancellation);
+
+                            }
+
+
+
 
                             //document.querySelector('#myNavigator').pushPage('html/splitter.html');
                         } else {
                             div.style.display = 'none';
-                            navigator.notification.alert("Allotment Letter is applicable only for the candidate with confirmed Application.");
+                            navigator.notification.alert("Merit Number is applicable only for the candidate with confirmed Application. Candidate has not confirmed his/her application.");
                         }
                     }
                     , 400: function (response) {
                         hideSpinner();
                         // console.log(e);
-                        navigator.notification.alert("Registartion and Password Wrong");
+                        navigator.notification.alert("Registration or Password Wrong");
                     }
                     , 0: function (response) {
                         hideSpinner();
